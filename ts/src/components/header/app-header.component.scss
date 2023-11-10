@@ -1,0 +1,57 @@
+header{
+    background: #FDF1EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.language-btn {
+    width: 9.7rem;
+    height: 3.4rem;
+    border-radius: 3px;
+    border: 1px solid #CCC;
+    background-color: transparent;
+}
+
+.avatar {
+    img{
+        border-radius: 50%;
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    p{
+        width: 1.2rem;
+        height: 1.2rem;
+        position: absolute;
+        margin-top: -4%;
+        margin-right: 4%;
+        font-size: 1.0rem;
+        text-align: center;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+    }
+}
+
+.titles{
+    color: #725C5C;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+
+    p:nth-child(2) {
+        font-size: 2.2rem;
+    }
+}
+
+.info-login {
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: right;
+    
+    p:nth-child(2) {
+        font-size: 1.4rem;
+    }
+}
