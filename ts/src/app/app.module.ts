@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SideMenu } from 'src/components/side-menu/side-menu.component';
@@ -8,6 +9,7 @@ import { VideoComponent } from 'src/components/section-video/section-video.compo
 import { DetailPanelComponent } from 'src/components/detail-panel/detail-panel.component';
 import { ResumeComponentComponent } from 'src/components/resume-component/resume-component.component';
 import { DiscussionsComponent } from 'src/components/discussions/discussions.panel.component';
+import { LogosComponent } from 'src/components/logos/logos.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { DiscussionsComponent } from 'src/components/discussions/discussions.pan
     VideoComponent,
     DetailPanelComponent,
     ResumeComponentComponent,
-    DiscussionsComponent
+    DiscussionsComponent,
+    LogosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

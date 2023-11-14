@@ -16,8 +16,6 @@ export class ResumeComponentComponent implements OnInit {
 
   isActiveResume(): void {
     this.activeResume = true;
-    console.log("Socorro Deus!!!");
-    
   }
 
 }

@@ -3,7 +3,9 @@ export type CommentType = {
     author: string;
     comment: string;
     likes: number;
-    replys: ReplyType | []
+    replys: ReplyType[] | [],
+    isAvaliabe: boolean;
+    isCommentActive: boolean
 }
 
 export type ReplyType = {

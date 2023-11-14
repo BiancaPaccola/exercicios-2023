@@ -1,6 +1,14 @@
 section{
-   padding: 2.0rem 4.5rem 3.0rem 3rem;
+    display: flex;
+    flex-direction: column;
+   padding: 2.0rem 3rem 3.0rem 0;
 }
+
+.panel{
+    width: 24.2rem;
+    max-height: 43.9rem;
+    align-self: self-end;
+  }
 
 button {
     border-radius: 4px;
