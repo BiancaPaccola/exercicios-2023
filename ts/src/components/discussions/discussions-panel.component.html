@@ -1,7 +1,7 @@
 <section>
   <header class="header-detail"><p>Discussões</p></header>
 
-  <div class="discussions-panel">
+  <div class="comments-container">
     
     <div [ngSwitch]="topicPanel" class="topicPanel">
 
@@ -16,7 +16,7 @@
         </p>
 
         <div id="divider">
-          <button (click)="topicPanel = 'topicForm'">
+          <button (click)="topicPanel = 'topicForm'" class="btn-create-topic">
             <svg
               width="17"
               height="17"
@@ -77,8 +77,8 @@
       *ngFor="let comment of commentsList"
       (click)="comment.isCommentActive = !comment.isCommentActive"
     >
-      <div class="new-comment" *ngIf="comment.isAvaliabe">
-        <p>{{ comment.subject }}</p>
+      <div class="answered-topic" *ngIf="comment.isAvaliabe">
+        <p class="ops-topic-subject">{{ comment.subject }}</p>
         <p>{{ comment.author }}</p>
         <p>
           {{
