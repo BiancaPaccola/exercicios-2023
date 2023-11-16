@@ -7,9 +7,7 @@
 
       <div class="new-topic" *ngSwitchCase="'newTopic'">
         <p>Compartilhe suas ideias ou dúvidas com os autores!</p>
-
-        <logos-component></logos-component>
-
+          <logos-component></logos-component>
         <p>
           Sabia que o maior estímulo no desenvolvimento científico e cultural é
           a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
@@ -48,7 +46,7 @@
           <input
             type="text"
             name="subject"
-            for="subject"
+            class="subject"
             placeholder="Defina um tópico sucinto para notificar os autores..."
             [(ngModel)]="commentModel.subject"
           />
@@ -59,7 +57,7 @@
             [(ngModel)]="commentModel.comment"
           ></textarea>
           <span>
-            <button (click)="submit()">Enviar</button>
+            <button (click)="submit()" class="button">Enviar</button>
           </span>
         </form>
       </div>
@@ -77,10 +75,10 @@
       class="comments"
       *ngFor="let comment of commentsList"
     >
-      <div [ngClass]="'comment.replys.length() > 0' ? 'answered-topic' : 'topic'" *ngIf="comment.isAvaliabe"
+      <div [ngClass]="'comment.replys.length() > 0' ? 'answered-topic' : 'topic'" *ngIf="comment.isAvaliabe" (click)="comment.isCommentActive = !comment.isCommentActive"
         >
         <p class="ops-topic-subject"
-        (click)="comment.isCommentActive = !comment.isCommentActive">{{ comment.subject }}</p>
+        >{{ comment.subject }}</p>
         <p>{{ comment.author }}</p>
         <p>
           {{
@@ -156,6 +154,7 @@
           *ngFor="let replys of comment.replys"
         >
           <div
+          class="comment-item"
             [ngStyle]="
               replys.author == comment.author
                 ? { 'background-color': 'white' }
